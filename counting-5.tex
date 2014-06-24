@@ -70,7 +70,7 @@ traves@usna.edu, wakefiel@usna.edu}}
 
 \begin{abstract}
 
-We study enumerative questions on the moduli space $\M(L)$ of hyperplane arrangements with a given intersection lattice $L$. Mn\"ev's Universality Theorem suggests that these moduli spaces can be arbitrarily complicated; indeed it is even difficult to compute the dimension $D =\dim \M(L)$. Embedding $\M(L)$ in a product of projective spaces, we study the degree $N=\deg \M(L)$, which can be interpreted as the number of arrangements in $\M(L)$ that pass through $D$ points in general position. For generic arrangements $N$ can be computed combinatorially and this number also appears in the study of the Chow variety of zero dimensional cycles. We compute $D$ and $N$ using Schubert calculus in the case where $L$ is the intersection lattice of the arrangement obtained by taking multiple cones over a generic arrangement. We also calculate the characteristic numbers for families of generic arrangements in $\P^2$ with 3 and 4 lines.
+We study enumerative questions on the moduli space $\M(L)$ of hyperplane arrangements with a given intersection lattice $L$. Mn\"ev's universality theorem suggests that these moduli spaces can be arbitrarily complicated; indeed it is even difficult to compute the dimension $D =\dim \M(L)$. Embedding $\M(L)$ in a product of projective spaces, we study the degree $N=\deg \M(L)$, which can be interpreted as the number of arrangements in $\M(L)$ that pass through $D$ points in general position. For generic arrangements $N$ can be computed combinatorially and this number also appears in the study of the Chow variety of zero dimensional cycles. We compute $D$ and $N$ using Schubert calculus in the case where $L$ is the intersection lattice of the arrangement obtained by taking multiple cones over a generic arrangement. We also calculate the characteristic numbers for families of generic arrangements in $\P^2$ with 3 and 4 lines.
 
 \end{abstract}
 
@@ -104,11 +104,11 @@ We study enumerative questions on the moduli space $\M(L)$ of hyperplane arrange
 
 \section{Introduction}
 
-Enumerative geometry has a monumental history and continues to be an inspiration for many different fields of cutting edge research (for example see Kontsevich and Manin \cite{KM-94} and Katz \cite{Katz}). In particular, solutions to enumerative problems often give deep insight into the geometric nature of various algebraic varieties and important spaces. 
+Enumerative geometry has a monumental history and continues to be an inspiration for many different fields of cutting edge research (for example see \cite{KM-94} and \cite{Katz}). The solution to some enumerative problems have given deep insight into the geometric nature of various algebraic varieties and important spaces. 
 
-Realization spaces of matroids (or moduli spaces of hyperplane arrangements) give a beautiful connection between combinatorics and algebraic geometry. In particular, Mn\"{e}v's Univserality Theorem \cite{Mnev} presents matroids as a kind of dictionary for quasi-projective varieties. These realization spaces have been studied from many different viewpoints. Kapranov \cite{Kapranov-93}  showed the Hilbert compactification of the moduli space of generic arrangements could be viewed as a Chow quotient.  Hacking, Keel, and Tevelev  \cite{HKT-06} applied the relative minimal model program to the moduli space of arrangements. Terao \cite{Terao-02} studied the closure of this moduli space in a product of projective spaces and an associated logarithmic Gauss-Manin connection. Speyer \cite{Speyer-09} proved that the $K$-theory class (actually a push forward-pullback) of the inclusion of the moduli space into the appropriate Grassmannian is actually the 2-variable Tutte polynomial of the associated matroid. Then Fink and Speyer \cite{Fink-Speyer-12} generalized this result to non-realizable matroids. In this note we study some of the geometry of this moduli space and find another use of the Tutte polynomial.
+Realization spaces of matroids (or moduli spaces of hyperplane arrangements) give a beautiful connection between combinatorics and algebriac geometry. In particular, Mnev's univserality theorem presents matroids as a kind of dictionary for quasi-projective varieties (see \cite{Mnev}). These realization spaces have been studied from many different view points. In \cite{Kapranov-93} Kapranov showed the Hilbert compactification of the moduli space of generic arrangements could be viewed as a Chow quotient. In \cite{HKT-06} Hacking, Keel, and Tevelev applied the relative minimal model program the moduli space of arrangements. Terao in \cite{Terao-02} studied the closure of this moduli space in a product of projective spaces and an associated logarithmic Gauss-Manin connection. Speyer in \cite{Speyer-09} proved that the $K$-theory class (actually a push forward-pullback) of the inclusion of the moduli space into the appropriate Grassmannian is actually the 2-variable Tutte polynomial of the associated matroid. Then Fink and Speyer in \cite{Fink-Speyer-12} generalized this result to non-realizable matroids. In this note we study some of the geometry of this moduli space and find another use of the Tutte polynomial.
 
-One of our motivating problems is Terao's conjecture which concerns a subset of the realization space consisting of free arrangements (see Orlik and Terao \cite{OT} for a general reference on hyperplane arrangements). Yuzvinsky \cite{Yuz-93} showed that this subset was Zariski open. It is not known if this subset is also closed. Our focus here is on computing the dimension and essentially the degree of this realization space by using both combinatorial and geometric methods. 
+One of our motivating problems is Terao's conjecture which concerns a subset of the realization space called free arrangements (see for a general reference for hyperplane arrangements \cite{OT}). In \cite{Yuz-93} Yuzvinsky showed that this subset was Zariski open. It is not known if this subset is also closed. Our focus here is on computing the dimension and essentially the degree of this realization space by using both combinatorial and geometric methods. 
 
 To each hyperplane arrangement $\A = \{H_1, \ldots, H_k\}$ in $\P^ n$
 we associate an {\em intersection lattice} $\L(\A)$, the poset whose
@@ -265,7 +265,7 @@ hyperplanes. Carlini discovered the following fact while studying the
 Chow variety of zero dimensional degree-$k$ cycles in $\P^n$
 \cite[Proposition 3.4]{Carlini}. 
 
-\begin{theorem} When $\A$ is a generic arrangement of $k$ hyperplanes
+\begin{theorem}\label{generics} When $\A$ is a generic arrangement of $k$ hyperplanes
   in $\P^n$ then the dimension $D$ of $\MLA$ is $kn$ and the number of
   arrangements with lattice type isomorphic to $A$ that pass through
   $D$ points in general position in $\P^n$ is $$ \N_\A = \frac{1}{k!}
@@ -309,82 +309,246 @@ Next we prove a Lemma that will be used in many of the following results.
 
 \begin{lemma}\label{transpts}
 
-Fix an arrangement $\A$ in $\P^n$ with $D=\dim \M_\A$ and $|\A|=k$. The conditions that the arrangement contain $D$ general position points are transverse and are given by the cohomology class $$\left(\sum_{i=1}^kx_i\right)^D$$ where the $x_i$ are the classes of hyperplanes in the Chow ring $A^* ((\P^{n*})^k)$.
+Fix an arrangement $\A$ in $\P^n$ with $D=\dim \M_\A$ and $|\A|=k$. The conditions that the arrangement contain $D$ specified points in general position are transverse and the cohomology class corresponding to the intersection of these conditions is$$\left(\sum_{i=1}^kx_i\right)^D$$ where the $x_i$ are the classes of hyperplanes in the Chow ring $A^* ((\P^{n*})^k)$.
 
 \end{lemma}
 
-\begin{proof}
+\begin{proof} The class of the condition that a point lies on the $i$th hyperpane is just $x_i$. Then the class of the condition that a point lies on one of the $k$ hyperplanes is $\sum_{i=1}^kx_i$. Now, the action of $\mathrm{PGL}(n)^k$ on $\M_\A$ is transitive on $(\P^{n*})^k$. Since the $D$ point conditions are assumed to be generic we can use this $\mathrm{PGL}(n)^k$ action to move one point condition to another. Hence Kleiman's Transversality Theorem \cite{Kleiman} says that these conditions are transverse and the corresponding Chow class is the product of the classes. \end{proof}
 
-The condition that a point lies on a hyperpane is just $x_i$. Then the condition that a point lies on one of the $k$ hyperplanes is $\sum_{i=1}^kx_i$. Now, the action of $\mathrm{PGL}(n)^k$ on $\M_\A$ is transitive on $(\P^{n*})^k$. Since the $D$ point conditions are assumed to be generic we can use this $\mathrm{PGL}(n)^k$ action to move one point condition to another. Hence Kleiman's Transversality Theorem \cite{Kleiman} says that these conditions are transverse and the corresponding Chow class is the product of the same class. \end{proof}
+Note that Theorem \ref{generics} could be proved easily also by Lemma \ref{transpts}. Since we are not putting any conditions on the generic lines we have nothing but point conditions. Then the degree of the Chow class given in Lemma \ref{generics} counts the number of ordered generic hyperplane arrangements passing through $D$ points in general position. Dividing by $k!$ gives the number of such unordered generic arrangements.
 
 Continuing to focus on the case where $n=2$, we will compute the
 characteristic numbers of generic line arrangements with $k=3$ or
 $k=4$ lines.  The characteristic number $N_\A(p,\ell)$ measures the
 number of arrangements combinatorially equivalent to $\A$ that
 pass through $p$ points and are tangent to $\ell$ lines in general
-position (with $p + \ell = \dim \M_\A$). 
+position (with $p + \ell = \dim \M_\A$). To get these numbers we compute the degree of a related variety $M$ which is a delicate intersection calculation. We do this is two different ways. First we preform an explicit calculation using the method of undetermined coefficients. Second we argue the corresponding intersection class is a product using transversality arguments.
 
+The only way that an arrangement of 3 lines $\A=\{\ell_1,\ell_2,\ell_3\}$ can be tangent to a given line $L$ is if the cubic defining the arrangement meets the line $L$ at a point of multiplicity strictly greater than 1. If the arrangement is generic this means that an intersection point $\ell_i\cap \ell_j$ of two of the 3 lines must lie on $L$. This motivates the introduction of the points $p_{ij}=\ell_i\cap \ell_j$ in the following lemma: a generic arrangement is tangent to a line $L$ if and only if there exists a point $p_{ij}$ on $L$. 
+
+\begin{lemma}\label{3linesM}
+The set
+$$ M = \left\{(\ell_1,\ell_2,\ell_3,p_{12},p_{13},p_{23}) \in 
+\left( \P^{2*}\right)^3 \times \left( \P^2 \right)^3\; : \; p_{ij} =
+\ell_i \cap \ell_j  \text{ for $1 \leq i < j \leq 3$} \right\}$$ 
+is a quasi-projective variety of dimension 6 in $(\P^{2*})^3\times (\P^{2})^3$. The Chow ring is $$A=A((\P^{2*})^3\times (\P^{2})^3)\cong \Z[x_1,x_2,x_3,y_{12},y_{13},y_{23}]/(x_1^3,x_2^3,x_3^3,y_{12}^3,y_{13}^3,y_{23}^3)$$ where $x_i$ correspond to the lines and the $y_{ij}$ correspond to the points. In $A$ the class of $M$ is $$[M]=\left[\cap_{1 \leq i < j \leq 3} \left( (p_{ij} \in \ell_i) \cap (p_{ij}
+\in \ell_j)\right)\right] = \prod_{1 \leq i < j \leq 3} (x_i 
++ y_{ij})(x_j + y_{ij}) .$$
+
+\end{lemma}
+
+\begin{proof} Since $M$ has codimension 6 the class $[M]$ is a degree 6 polynomial in the Chow ring $A$. So, we write this class as the sum of all degree 6 monomials in $A$: $$[M]=\sum\limits_{a_1+\cdots +a_6=6}c_{(a_i)}x_1^{a_1}x_2^{a_2}x_3^{a_3}y_{12}^{a_4}y_{13}^{a_5}y_{23}^{a_6} .$$ Now we will determine all the coefficients. First we will show which coefficients are zero. To do this we will first build the entire set of these monomials and split it up into types. 
+
+The first type of monomials we define are (below $p\in A_i/(q)$ means a monomial in the quotient ring not treated as a coset)  $$T_1=\left\{ \{ x_1^2y_{12}^2p| p\in A_2/(x_1,y_{12})\} \bigcup \{ x_2^2y_{12}^2p| p\in A_2/(x_2,y_{12})\} \right.$$ $$ \bigcup \{ x_1^2y_{13}^2p| p\in A_2/(x_1,y_{13})\} \bigcup \{ x_3^2y_{13}^2p| p\in A_2/(x_3,y_{13})\} $$ $$\left. \bigcup \{ x_2^2y_{23}^2p| p\in A_2/(x_2,y_{23})\} 
+\bigcup \{ x_3^2y_{23}^2p| p\in A_2/(x_3,y_{23})\}
+\right\}$$ The second type we define are $$T_2=\left\{ \{x_1^2x_2^2y_{12}p|p\in A_1/(x_1,x_2,y_{12})\} \bigcup \{x_1^2x_3^2y_{13}p|p\in A_1/(x_1,x_3,y_{13})\} \right. $$ $$ \left. \bigcup \{x_2^2x_3^2y_{23}p|p\in A_1/(x_2,x_3,y_{23})\} \right\} .$$ The third type we define are $$T_3=\left\{ \{x_1y_{12}^2y_{13}^2p|p\in A_1/(x_1,y_{12},y_{13})\} \bigcup \{x_2y_{12}^2y_{23}^2p|p\in A_1/(x_2,y_{12},y_{23})\} \right. $$ $$ \left. \bigcup \{x_3y_{23}^2y_{13}^2p|p\in A_1/(x_3,y_{23},y_{13})\} \right\} .$$ The fourth type we define is $$T_4=\{ x_1^2y_{23}^2x_2y_{12},x_1^2y_{23}^2x_3y_{13},x_2^2y_{13}^2x_1y_{12},x_2^2y_{13}^2x_3y_{23},x_3^2y_{12}^2x_1y_{13},x_3^2y_{12}^2x_2y_{23}\} .$$ Note that $|T_1|=54$, $|T_2|=9$, $|T_3|=9$, and $|T_4|=6$.
+
+For any monomial $m\in A_6$ we define the complement of $m$ by the unique monomial  $c(m)=m'$ such that $mm'\neq 0 \in A_{12}$. Set $Z_1=T_1\cup T_2\cup T_3\cup T_4$. Notice that $Z_1$ has the property that $c(Z_1)=Z_1$. Hence to show that the monomials in $Z_1$ have the coefficient of zero in $[M]$ we just multiply $[M]$ by each of the monomials in $Z_1$. Also, notice that within each type there is a union of smaller sets where each of those sets can be obtained from one another by a permutation of the coordinates. Hence if we can show that the coefficient is zero for one of the subsets then we have completed the task four the entire type. In the following arguments we will use duality on $\P^2$ often. We will treat a point in $\P^2$ as a point and sometimes we will treat it as a line.
+
+First we argue $[M]m=0$ where $m\in T_1$. Let $m\in T_1$ be in the first subset so $m=x_1^2y_{12}^2m'$. Then in $A$ this monomial $m$ represents fixing a generic line for $\ell_1$ in the first factor of $\P^{2*}$ and a generic point for $p_{12}$. Set $\pi_i : \left( \P^{2*}\right)^3 \times \left( \P^2 \right)^3\to \P^{2*}$ to be the projection to the factor corresponding to the line $\ell_i$ and $\pi_{ij} : \left( \P^{2*}\right)^3 \times \left( \P^2 \right)^3\to \P^{2}$ to be the projection to the factor corresponding to the point $p_{ij}$. With this notion we can say $m=[\pi_{1}^{-1}(\text{generic point}) \cap \pi_{12}^{-1}(\text{generic point})\cap (m' \text{ conditions})]$ where we will not need the conditions from $m'$. Using the Moving Lemma (see \cite{EH} Theorem 5.4) $$[M]m=[M\cap \pi_{1}^{-1}(\text{generic point}) \cap \pi_{12}^{-1}(\text{generic point})\cap (m' \text{ conditions})] .$$ In $M$ the point $p_{12}$ must lie on $\ell_1$ and this can not happen if $\ell_1$ and $p_{12}$ are generic. Hence $[M]m=0.$
+
+The other types have similar arguments. We include them for completeness, but with briefer arguments. For type 2 we look again at the first subset and put $m=x_1^2x_2^2y_{12}m'$. Then $$m=[\pi_{1}^{-1}(\text{generic point})\cap \pi_{2}^{-1}(\text{generic point}) \cap \pi_{12}^{-1}(\text{generic line})\cap (m' \text{ conditions})].$$ This means that we have fixed a generic line for line 1 and line 2. Hence the point $p_{12}$ is fixed using $M$, but the generic lines worth of points for $p_{12}$ means we can not find such a configuration. Hence $[M]m=0$.
+
+For type 3 we again look at the first subset $m=x_1y_{12}^2y_{13}^2m'$. Then $$m=[\pi_{1}^{-1}(\text{generic line})\cap \pi_{12}^{-1}(\text{generic point})\cap \pi_{13}^{-1}(\text{generic point})\cap (m' \text{ conditions})] .$$ Here we have generic points for the points $p_{12}$ and $p_{13}$. With a generic lines worth of conditions for line one we can not possibly contain both of the generic points. Hence $[M]m=0$.
+
+For type 4 we just look at the first monomial $m= x_1^2y_{23}^2x_2y_{12}$. Then $$m=[\pi_{1}^{-1}(\text{generic point})\cap \pi_{23}^{-1}(\text{generic point})\cap \pi_{2}^{-1}(\text{generic line})\cap \pi_{12}^{-1}(\text{generic line})].$$ In this case we have fixed a generic line for line one and fixed a generic point for point $p_{23}$. Couple this with giving a generic linear condition on line two means that we have fixed line 2. However we also have a generic linear condition on point $p_{12}$. But if line two and line one are fixed then $p_{12}$ should be fixed also. Hence $[M]m=0$.
+
+Now we will define another set of monomials and prove that each of these monomials have a coefficient of 1 in $[M]$. Again we will define this set as a union of a few different types. Unfortunately, there are many more types in this set even though there are less total monomials. 
+
+We define the types in the following table.
+
+\begin{longtable}{|c|l|}
+\hline
+Type & Monomials\\
+\hline
+$S_1$ & $\{x_1^2x_2^2x_3^2\}$\\
+\hline
+$S_2$ & $\{x_1^2x_2^2x_3y_{13},x_1^2x_2^2x_3y_{23},x_1^2x_3^2x_2y_{23},x_1^2x_3^2x_2y_{12}, x_2^2x_3^2x_1y_{13},x_2^2x_3^2x_1y_{12}\}$\\
+\hline   
+$S_3$ & $\{x_1^2x_2^2y_{13}y_{23},x_1^2x_3^2y_{12}y_{23},x^2_2x_3^2y_{12}y_{13}\}$\\
+\hline
+$S_4$ & $\{ x_1^2x_2x_3y_{23}^2,x_2^2x_1x_3y_{13}^2,x_3^2x_2x_1y_{12}^2\}$\\
+\hline
+$S_5$ & $\{ x_1^2x_2x_3y_{12}y_{13},x_2^2x_1x_3y_{12}y_{23},x_3^2x_1x_2y_{13}y_{23}\}$\\
+\hline
+$S_6$ & $\{ x_1^2x_2x_3y_{23}y_{12},x_1^2x_2x_3y_{23}y_{13},x_2^2x_1x_3y_{13}y_{12},x_2^2x_1x_3y_{13}y_{23},$ \\
+& $x_3^2x_2x_1y_{12}y_{13},x_3^2x_2x_1y_{12}y_{23}\}$\\
+\hline
+$S_7$ & $\{ x_1^2x_2y_{13}y_{23}^2,x_1^2x_3y_{12}y_{23}^2,x_2^2x_1y_{23}y_{13}^2,x_2^2x_1y_{23}y_{13}^2,x_3^2x_1y_{23}y_{12}^2,x_3^2x_2y_{13}y_{12}^2\}$\\
+\hline
+$S_8$ & $\{ x_1^2x_2y_{12}y_{13}y_{23},x_1^2x_3y_{12}y_{13}y_{23}, x_2^2x_1y_{12}y_{13}y_{23},x_2^2x_3y_{12}y_{13}y_{23},$\\
+& $x_3^2x_2y_{12}y_{13}y_{23},x_3^2x_1y_{12}y_{13}y_{23}\}$\\
+\hline
+$S_9$ & $\{x_1^2y_{23}^2y_{12}y_{13},x_2^2y_{13}^2y_{23}y_{12},x_3^2y_{12}^2y_{23}y_{13}\}$ \\
+\hline
+$S_{10}$ & $\{ x_1x_2x_3y_{12}^2y_{13},x_1x_2x_3y_{12}^2y_{23},x_1x_2x_3y_{13}^2y_{12},x_1x_2x_3y_{13}^2y_{23},$\\
+& $x_1x_2x_3y_{23}^2y_{12},x_1x_2x_3y_{23}^2y_{13}\}$\\
+\hline
+$S_{11}$ & $\{ x_1x_2y_{12}^2y_{13}y_{23},x_1x_3y_{12}y_{13}^2y_{23},x_3x_2y_{12}y_{13}y_{23}^2\}$\\
+\hline
+$S_{12}$& $\{x_1x_2y_{12}y_{13}^2y_{23},x_1x_2y_{12}y_{13}y_{23}^2,x_1x_3y_{12}^2y_{13}y_{23},x_1x_3y_{12}y_{13}y_{23}^2,$\\
+& $x_3x_2y_{12}y_{13}^2y_{23},x_3x_2y_{12}^2y_{13}y_{23} \}$\\
+\hline
+$S_{13}$ & $\{ x_1x_2y_{13}^2y_{23}^2,x_1x_3y_{12}^2y_{23}^2,x_2x_3y_{12}^2y_{13}^2\}$\\
+\hline
+$S_{14}$ & $ \{ x_1y_{12}^2y_{13}y_{23}^2,x_1y_{12}y_{13}^2y_{23}^2, x_2y_{12}^2y_{13}^2y_{23},x_2y_{12}y_{13}^2y_{23}^2, $\\
+& $x_3y_{12}^2y_{13}y_{23}^2,x_3y_{12}^2y_{13}^2y_{23}\}$\\
+\hline
+$S_{15}$ & $\{y_{12}^2y_{13}^2y_{23}^2\}$\\
+\hline
+\end{longtable}
+
+Now put $Z_2=S_1\cup \cdots \cup S_{15}$. In the next table we compute the intersection of $M\cap m$ where $m\in Z_2$. We briefly describe, for each type, how this intersection results in a unique arrangement of three lines with the marked points $p_{ij}$. Again we use the argument that within each $S_i$ we only need to check one monomial since all the others within that class can be obtained from permuting coordinates. 
+
+\begin{longtable}{|c|l|l|}
+\hline
+Type &Monomial& Intersect this class with $M$ gives a unique point \\
+\hline
+\hline
+$S_1$&$x_1^2x_2^2x_3^2$ &Fixing three lines fixes the three intersection points. \\
+\hline
+$S_2$ & $x_1^2x_2^2x_3y_{13}$ & Fixing lines 1 and 2. Then fixing a linear condition\\
+&&  point 13 gives a unique point and then putting \\
+&&a linear condition on line 3 fixes it.\\
+\hline
+$S_3$ & $x_1^2x_2^2y_{13}y_{23}$ & Fixing lines 1 and 2. Then giving linear conditions on points\\
+&& 13 and 23 fixes those points which fixes line 3.\\
+\hline
+$S_4$ & $x_1^2x_2x_3y_{23}^2$ & Fix line 1 and point 23. Then putting linear conditions on lines \\
+&& 2 and 3 fixes them.\\
+\hline
+$S_5$ & $x_1^2x_2x_3y_{12}y_{13}$ & Fix line 1. Then Putting a linear condition on points \\
+&&12 and 13 fixes them on line 1. \\
+&&Then putting linear conditions on lines 2 and 3 fixes them.\\
+\hline
+$S_6$ &$x_1^2x_2x_3y_{12}y_{23}$ & Fixing line 1 and giving a linear condition on point 12\\
+&& fixes point 12. Together with putting a linear condition on\\
+&& line 2 fixes it. Then putting a linear condition on point 23\\
+&& fixes it and line 3.\\
+\hline 
+$S_7$ & $x_1^2x_2y_{13}y_{23}^2$ & Fixing line 1, point 23, and putting a linear condition on \\
+&&line 2 fixes it. Then putting a linear condition on point 13\\
+&& fixes it on line one and hence fixes line 3.\\
+\hline 
+$S_8$ & $x_1^2x_2y_{12}y_{13}y_{23}$ & Fix line 1 and putting liner conditions on points \\
+&&12 and 13 fixes these points. Then putting a linear\\
+&& condition on line 2 fixes it. And then finally fixing a linear \\
+&& condition on point 23 fixes it and line 3.\\
+\hline 
+$S_9$ &$x_1y_{23}^2y_{12}y_{13}$ & Fix line 1 and point 23. Putting linear conditions \\
+&&on points 12 and 13 fixes them on line 1. Then this \\
+&& fixes lines 2 and 3.\\
+\hline
+$S_{10}$ &$x_1x_2x_3y_{12}^2y_{13}$ &  Fixing point 12 with putting linear conditions \\
+&& on lines 1 and 2 fixes them. Then putting a linear condition on \\
+&& point 13 fixes it on line 1. Then putting a linear condition\\
+&& on line 3 fixes it.\\
+\hline 
+$S_{11}$&$x_1x_2y_{12}^2y_{13}y_{23}$ & Fixing point 12 with putting linear conditions \\
+&& on lines 1 and 2 fixes them. Then putting linear conditions on\\
+&& points 13 and 23 fixes them and hence line 3.\\
+\hline
+$S_{12}$ &$x_1x_2y_{12}y_{13}^2y_{23}$ & Fixing point 13 and putting a linear condition on \\
+&& line 1 fixes it. Then putting a linear condition on point 12 fixes \\
+&& it on line 1. Then the linear condition on line 2 fixes it.\\
+&&Then the linear condition on point 23 fixes it and line 3.\\
+\hline
+$S_{13}$ &$x_1x_2y_{13}^2y_{23}^2$& Fixing points 13 and 23 fixes line 3. Then  putting linear\\
+&&conditions on lines 1 and 2 fixes them\\
+\hline
+$S_{14}$ & $x_1y_{12}^2y_{13}y_{23}^2$& Fixing points 12 and 23 fixes line 2. Then giving a linear\\
+&&condition on line 1 fixes it. Then putting a linear condition\\
+&& on point 13 fixes it on line 1 which also fixes line 3.\\
+\hline
+$S_{15}$&$y_{12}^2y_{13}^2y_{23}^2$ & The points 12, 13, and 23 are fixed. This fixes lines 1,2, and 3.\\
+\hline
+\end{longtable}
+
+Again since the complement $c(Z_2)=Z_2$ we have shown that the coefficients of all these monomials in $[M]$ are equal to 1. There is just one more monomial to consider. Let $Z_3=\{x_1x_2x_3y_{12}y_{13}y_{23}\}$. The set also has the property $c(Z_3)=z_3$. Now we compute its coefficient. The class $x_1x_2x_3y_{12}y_{13}y_{23}$ puts a linear condition on each line and point. For the lines we can think of this as fixing three points $q_1$, $q_2$, and $q_3$ which the three lines $\ell_1$, $\ell_2$, and $\ell_3$ respectively must contain. For the linear conditions on the points $p_{ij}$ we will fix three lines $L_{12}$, $L_{13}$, and $L_{23}$ where the points $p_{12}$, $p_{13}$, and $p_{23}$ must lie on respectively. 
+
+Suppose now that we choose a random point $p_{12}$ on line $L_{12}$. Fix a embedding $\phi :\P^1\to \P^2$ defined by $\phi([a:b])=[f_1(a:b):f_2(a:b):f_3(a:b)]$ where $\phi(\P^1)=L_{12}$ and each $f_i$ is homogeneous of degree 1. Then there exists $[a:b]\in \P^1$ such that $\phi ([a:b])=p_{12}$. Now since the points $q_1$ and $p_{12}$ are fixed we have that line 1, $\ell_1$, is fixed. Line $\ell_1$ fixed means that we can get $p_{13}=\ell_1\cap L_{13}$. Next we find $\ell_3$ is determined by the points $p_{13}$ and $q_3$. With $\ell_3$ we can get $p_{23}=\ell_3\cap L_{23}$. Now we make $\ell_2$ the line through the points $p_{23}$ and $q_2$. Since we chose $p_{12}$ randomly at the beginning of this process we have that $P=\ell_2\cap L_{12}$ may not be equal to $p_{12}$. Each step in the above process to determine each line and point is a cross product computation with a vector of constants (the line or point that is fixed before the choice of $p_{12}$) with a vector of homogenous degree 1 in the functions $f_i$. Hence there exists linear functions $g_1$ and $g_2$ such that $P=\phi([g_1(a:b),g_2(a:b)])$. Now if $P=p_{12}$ then the determinate $$\left| \begin{array}{cc} g_1(a:b)&g_2(a:b)\\
+a&b
+\end{array}\right| =0.$$ Since this a homogeneous quadratic polynomial of two variables there must be 2 solutions up to multiplicity. Hence the coefficient of the monomial $x_1x_2x_3y_{12}y_{13}y_{23}$ is 2.
+
+The total number of terms in $A_6$ 141 (this can be calculated by a standard inclusion-exclusion argument). Since $|Z_1|=78$, $|Z_2|=62$, and $|Z_3|=1$ we have computed the coefficients of all possible terms. Finally with any computer software system one can expand the polynomial $\prod_{1 \leq i < j \leq 3} (x_i 
++ y_{ij})(x_j + y_{ij})$ and see that the coefficients match what we have just determined and this completes the proof. \end{proof}
+
+\begin{remark} A generic element of $M$ can be thought of as a generic arrangement of 3 lines. The complement inside $M$ of this generic locus consists of several 5 dimensional subvarieties. These consist of arrangements where two lines are the same and arrangements consisting of a triple line, together with their marked points. \end{remark}
+
+Now we can state the characteristic numbers for 3 lines.
+ 
 \begin{theorem} \label{cn}
 The characteristic numbers $\N_3(p,6-p)$ for a generic arrangement
-of 3 lines are given in Table \ref{c3} and the  characteristic numbers $\N_4(p,8-p)$ for a generic arrangement
-of 4 lines are given in Table \ref{c4}.
+of 3 lines are given in the following table.
 
-\begin{table}[h!t]
-\begin{center}
 \begin{tabular}{|l||l|l|l|l|l|l|l|}
 \hline $p$ & 0 & 1 & 2 & 3 & 4 & 5 & 6  \\ \hline 
 
 $\N_3(p,6-p)$ & 15 & 30 & 48 & 57 & 48 & 30 & 15 \\ \hline
 \end{tabular}
-\caption{Characteristic numbers of the generic arrangement of 3 lines} 
-\label{c3}
-\end{center}
-\end{table}
 
-\begin{table} 
-\begin{center}
-\begin{tabular}{|l||l|l|l|l|l|l|l|l|l|}
-\hline $p$ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ \hline 
-$\N_4(p,8-p)$ 
-& 16695 & 17955 & 13185 & 8190 & 4410 & 2070 & 855 & 315 & 105  
-\\ \hline
-\end{tabular}
-\caption{Characteristic numbers of the generic arrangement of 4 lines} 
-\label{c4}
-\end{center}
-\end{table}
 
 \end{theorem}
 
 \begin{proof}
-For the 3-generic arrangements, consider the incidence correspondence 
-$$ M = \{(\ell_1,\ell_2,\ell_3,p_{12},p_{13},p_{23}) \in 
-\left( \P^{2*}\right)^3 \times \left( \P^2 \right)^3\; : \; p_{ij} \in
-\ell_i \cap \ell_j  \text{ for $1 \leq i < j \leq 3$} \}$$ 
-of dimension 6. Note that a 3-generic arrangement $\A = \{\ell_1,\ell_2,\ell_3\}$ is tangent
-to a line $L$ if and only if we can find a lift
-$(\ell_1,\ell_2,\ell_3,p_{12},p_{13},p_{23}) \in M$ of $\A$ so that some $p_{ij} \in
-L$. 
-
-Denoting the cohomology class of a hyperplane divisor on the $i^\text{th}$
-copy of $\P^{2*}$ by $x_i$ and the cohomology class of a hyperplane
-divisor on the copy of $\P^{2*}$ corresponding to $p_{ij}$ by $y_{ij}$, we use the
-K\"{u}nneth formula to write the Chow ring 
-$ A^*\left( \left( \P^{2*}\right)^3 \times \left( \P^2 \right)^3
-\right)$ as $$\Z[x_1,x_2,x_3,y_{12},y_{13},y_{23}]/(x_1^3,x_2^3,x_3^3,y_{12}^3,y_{13}^3,y_{23}^3).$$
-Now $$[M] = [\cap_{1 \leq i < j \leq 3} (p_{ij} \in \ell_i) \cap (p_{ij}
+If we intersect $M$ with 6 generic conditions then we will obtain a finite number of points none of which will lie on this 5 dimensional non-generic subvarieties. So, when we multiply the class $[M]$ with that from Lemma \ref{transpts} we will only be counting generic arrangements of 3 lines. From Lemma \ref{3linesM} we have $$[M] = [\cap_{1 \leq i < j \leq 3} (p_{ij} \in \ell_i) \cap (p_{ij}
 \in \ell_j)] = \prod_{1 \leq i < j \leq 3} (x_i 
-+ y_{ij})(x_j + y_{ij})$$ because the hypersurfaces determined by the
-bilinear conditions $p_{ij} \in \ell_i$ 
-intersect transversely. Moreover, the condition that the arrangement
++ y_{ij})(x_j + y_{ij}).$$ Then the condition that the arrangement
 $\A$ passes through a given point $p \in \P^2$ has cohomology class $x_1+x_2+x_3$
 and the condition that a given line $L \in \P^2$ contains one of the
-$p_{ij}$ has class $y_{12}+y_{13}+y_{23}$. It follows that the degree of the class
-$[M](x_1+x_2+x_3)^p(y_{12}+y_{13}+y_{23})^{6-p}$ in $A^*\left( \left(\P^{2*}\right)^3 \times \left( \P^2 \right)^3
-\right)$ counts the number of labeled 3-generic arrangements that pass
+$p_{ij}$ has class $y_{12}+y_{13}+y_{23}$. Using the Moving Lemma and Lemma \ref{transpts} the degree of the class
+$[M](x_1+x_2+x_3)^p(y_{12}+y_{13}+y_{23})^{6-p}$ in $A^*\left( \left(\P^{2*}\right)^3\times \left(\P^{2}\right)^3\right)$ counts the number of labeled 3-generic arrangements that pass
 through $p$ general points and are tangent to $6-p$ general lines in
 $\P^2$. To remove the effect of the labeling, we divide these numbers
-by $3!$ to obtain the characteristic numbers in Table \ref{c3}. 
+by $3!$ to obtain the characteristic numbers. \end{proof}
+
+\begin{remark}
+The symmetry of $\N_3(p,6-p)$  is easily explained: the dual of a
+3-generic arrangement through $p$ points $P_1,\ldots,P_p$ and tangent
+to $6-p$ lines $L_1,\ldots,L_{6-p}$
+is a 3-generic arrangement through the $6-p$ dual points
+$\hat{L}_1,\ldots,\hat{L}_{6-p}$ and tangent to the $p$ dual lines
+$\hat{P}_1,\ldots,\hat{P}_p$. This does not happen in the 4 lines case as one can see below.\end{remark}
+
+Now we work the 4 line case. In this case we will make the same class $M$ as before but we will use transversality arguments.
+
+\begin{lemma}\label{4linesM}
+The set
+$$ M = \left\{(\ell_1,\dots,\ell_4,p_{12},\dots,p_{34}) \in 
+\left( \P^{2*}\right)^{4}\times \left( \P^{2}\right)^{6} \; : \; p_{ij} \in
+\ell_i \cap \ell_j  \text{ for $1 \leq i < j \leq 4$} \right\}$$ 
+is a quasi-projective variety of codimension 12 in $\left( \P^{2*}\right)^{4}\times \left( \P^{2}\right)^{6}$. The Chow ring is $$A=A\left(\left( \P^{2*}\right)^{4}\times \left( \P^{2}\right)^{6}\right) \cong \Z[x_1,\dots, x_4,y_{12},\dots , y_{34}]/(x_1^3,\dots,x_4^3,y_{12}^3,\dots,y_{34}^3)$$ where $x_i$ correspond to the lines and the $y_{ij}$ correspond to the points on the lines. In this ring the class of $M$ is $$[M]=\left[\cap_{1 \leq i < j \leq 4} \left( (p_{ij} \in \ell_i) \cap (p_{ij}
+\in \ell_j)\right)\right] = \prod_{1 \leq i < j \leq 4} (x_i 
++ y_{ij})(x_j + y_{ij}) .$$
+
+\end{lemma}
+
+\begin{proof}
+
+As in Lemma \ref{3linesM} set $\pi_i : \left( \P^{2*}\right)^4 \times \left( \P^2 \right)^6\to \P^{2*}$ to be the projection to the factor corresponding to the line $\ell_i$ and $\pi_{ij} : \left( \P^{2*}\right)^4 \times \left( \P^2 \right)^6\to \P^{2}$ to be the projection to the factor corresponding to the point $p_{ij}$. The condition $p_{ij}\in \ell_i$ is a bilinear hypersurface in $\left( \P^{2*}\right)^{4}\times \left( \P^{2}\right)^{6}$ whose class is $x_i+y_{ij}$. The variety $M$ is the intersection of these 12 hypersurfaces.  We will show that this is a local complete intersection.
+
+Put $\pi=\pi_1\times \pi_2\times \pi_3\times \pi_4$. Examine the restriction $\pi :M \to \left(\P^{2*}\right)^4$. Now stratify $\left(\P^{2*}\right)^4$ into the following quasi-projective subvarieties $G=$``generic arrangements '', $T=$``arrangements where two lines are equal and the other two are generic'', $D=$``arrangements where there are two generic double lines'', $H=$``arrangements where three lines are equal and the last one is generic'', and $F=$``arrangements where all four lines are equal''. So, $\left(\P^{2*}\right)^4=G\cup D\cup T\cup H\cup F$ and all the unions are disjoint. The dimension of $G$ is 8 and for any $x\in G$ the fiber  $\pi^{-1}(x)$ is a unique point. Hence $\pi^{-1}(G)$ is dimension 8. The dimension of $T$ is 6 and for any $x\in T$ the fiberfiber  $\pi^{-1}(x)$ is dimension 1. Hence $\pi^{-1}(T)$ is dimension 7. The dimension of $D$ is 4 and for $x\in D$ the fiber  $\pi^{-1}(x)$ is dimension 2. Hence the dimension of $\pi^{-1}(D)$ is 6. The dimension of $H$ is 4 and for $x\in H$ the fiber  $\pi^{-1}(x)$ is dimension 3. Hence the dimension of $\pi^{-1}(H)$ is 7. The dimension of $F$ is 2 and for $x\in F$ the fiber  $\pi^{-1}(x)$ is dimension 6. Hence the dimension of $\pi^{-1}(F)$ is 8. Since $M=\pi^{-1}(G)\cup\pi^{-1}(T)\cup\pi^{-1}(D)\cup\pi^{-1}(H)\cup\pi^{-1}(F)$ we have shown that the dimension of $M$ is 8. 
+
+Hence $M$ is a local complete intersection in $\left( \P^{2*}\right)^4 \times \left( \P^2 \right)^6$. Using Theorem 5.10 in \cite{EH} the class of the intersection $[M]$ is the product of the classes $x_i+y_{ij}$.
+\end{proof}
+
+\begin{theorem} \label{cn}
+The characteristic numbers $\N_4(p,6-p)$ for a generic arrangement
+of 4 lines are given in the following table.
+
+\begin{tabular}{|l||l|l|l|l|l|l|l|l|l|}
+\hline $p$ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ \hline 
+
+
+$\N_4(p,8-p)$ 
+& 16695 & 17955 & 13185 & 8190 & 4410 & 2070 & 855 & 315 & 105  
+\\ \hline
+\end{tabular}
+
+
+\end{theorem}
+
+\begin{proof}
 
 The case of 4-generic arrangements is similar but there is one
 subtlety. The degree of $[M](x_1+x_2+x_3+x_4)^p(y_{12}+y_{13}+y_{14}+y_{23}+y_{24}+y_{34})^{8-p}$
@@ -422,18 +586,10 @@ $p=2$, giving rise to the values in for $N_4(p,8-p)$ in Table
 \ref{c4}. 
 \end{proof} 
 
-\begin{remark}
-The symmetry in Table \ref{c3} is easily explained: the dual of a
-3-generic arrangement through $p$ points $P_1,\ldots,P_p$ and tangent
-to $6-p$ lines $L_1,\ldots,L_{6-p}$
-is a 3-generic arrangement through the $6-p$ dual points
-$\hat{L}_1,\ldots,\hat{L}_{6-p}$ and tangent to the $p$ dual lines
-$\hat{P}_1,\ldots,\hat{P}_p$. 
-
-It would be interesting to have an explanation for the unimodality of
-the characteristic numbers in Tables \ref{c3} and \ref{c4}. In
+\begin{remark} It would be interesting to have an explanation for the unimodality of
+the characteristic numbers $N_d(p,2d-p)$. In
 particular, is it the case that the characteristic numbers
-$\{N_d(p,2d-p)\}$ for
+$\{ N_d(p,2d-p)\}$ for
 $d$-generic arrangements always form a unimodal sequence? 
 \end{remark}
 
@@ -1549,7 +1705,7 @@ enumerative geometry of more general families of line arrangements.
 
 
 
-\bibliography{counting-2}{}
+\bibliography{counting}{}
 \bibliographystyle{plain}
 \end{document}
 
